@@ -1,0 +1,20 @@
+kosmo계정의 chatting_tb 테이블에 삽입됨
+
+오라클 드라이버 때문에 JDK에 드라이버를 설치하거나
+이클립스에서 서버를 실행해야함.
+
+create table chatting_tb (
+    idx number primary key,
+    client_name varchar2(200) not null,
+    client_message varchar2(2000) not null,
+    postdate date default sysdate
+);
+
+create sequence chatting_seq
+    increment by 1
+    start with 1
+    nomaxvalue
+    minvalue 1
+    nocycle
+    nocache;
+
